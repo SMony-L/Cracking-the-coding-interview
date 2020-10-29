@@ -1,0 +1,11 @@
+int sum(Node node) {
+    if (node == null) {
+        return 0;
+    }
+    return sum(node.left) + node.value + sum(node.right);
+}
+
+Q: What would the runtime be?
+A1: The code goes through each node in the tree once and does a constant time amount of work. If there is N nodes, then the runtime is O(N)
+A2: Recursive pattern: Tree with branches (2) and the tree is a balanced binary search tree so the depth ~ log N. 
+    Then the runtime will be O(2^logN). According to Log definition -> O(2^logN) = O(N)

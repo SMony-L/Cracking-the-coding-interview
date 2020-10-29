@@ -1,0 +1,19 @@
+void permutation(String str) {
+    permutation(str, "");
+}
+
+void permutation(String str, String prefix) {
+    if (str.length() == 0) {
+        System.out.println(prefix); # Linear time O(N) 
+    }
+    else {
+        for (int i = 0; i < str.length(); i++) {
+            String rem = str.substring(0, i) + str.substring(i + 1); # Linear time O(N)
+            permutation(rem, prefix + str.charAt(i)); # O(N!) time
+        }
+    }
+}
+
+Q: What would the runtime be?
+A: View it as tree nodes. There will length of string factorial (str.length()!) leaf nodes. Total nodes in tree is n. So n * str.length()!
+    Total runtime [at worstcase] will be = O(n * n * n!) ~ O((n + 2)!) which is not the same as O(n!). 

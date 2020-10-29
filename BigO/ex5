@@ -1,0 +1,13 @@
+void printUnorderedPairs(int [] arrayA, int [] arrayB) {
+    for (int i = 0; i < arrayA.length; i++) {
+        for (int j = 0; j < arrayB.length; j++) {
+            for (int k = 0; j < 100000; k++) {
+                System.out.println(array[i] + "," + array[j]);
+            }
+            
+        }
+    }
+}
+
+Q: What is the runtime of this code?
+A: 100000 does not matter to the code. That for loop section is still constant time O(1). Such that the runtime is O(ab)

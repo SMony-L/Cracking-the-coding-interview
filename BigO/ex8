@@ -1,0 +1,16 @@
+An algorithm took in an array of strings, sorted each string, and then sorted the full array.
+Q: What would the runtime be?
+
+example : 
+input: Arr = ['Hello', 'Hi', 'World']
+
+sorted strings = ['ehllo', 'hi', 'dlorw']
+
+sorted Orignal Arr = ['dlorw', 'ehllo', 'hi']
+
+A: 
+- Sorting each string is O(s log s) where s = length of the longest string. 
+- Do for every sting and there are a string, where a = lenght of the array.
+- So we have O(a * s log s)
+- To sort all the strings. There are a string. Each string comparison takes O(s) time. There are O(a log a) comparisons => O(a* s log a) time.
+- Add everything the runtime will be O(a * s (log a + log s)).

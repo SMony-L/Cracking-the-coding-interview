@@ -1,0 +1,11 @@
+Which of the following are equivalent to O(N)? Why?
+- O(N + P), where P < N/2
+- O(2N)
+- O(N + logN)
+- O(N + M)
+
+A:
++ Yes. if P < N/2. We know that N is the dominant term so we can drop the O(P)
++ Yes. We can drop the constant term so O(2N) = O(N)
++ Yes. O(N) dominates the O(log N) so we can drop O(log N)
++ No. There is no relation between both N & M so we have to keep both term O(N + M)

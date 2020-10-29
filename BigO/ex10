@@ -1,0 +1,11 @@
+boolean isPrime(int n) {
+    for (int x = 2; x * x <= n; x++) { # Loop until we reach x = √(n)
+        if (n % x == 0) { # constant time
+            return false;
+        }
+    }
+    return true;
+}
+
+Q: What is the time complexity of this function?
+A: We loop till x = squareroot(n). => the runtime is O(√(N))

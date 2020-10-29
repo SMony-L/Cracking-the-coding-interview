@@ -1,0 +1,10 @@
+void printPairs(int [] array) {
+    for (int i = 0; i < array.length; i++) {
+        for (int j = 0; j < array.length; j++) {
+            System.out.println(array[i] + "," + array[j]);
+        }
+    }
+}
+
+// Q: What is the runtime of this code?
+// A: Inner loop O(N) and it is called N times. The runtime is O(N^2)
