@@ -1,0 +1,17 @@
+int powersOf2(int n) {
+    if (n < 1) {
+        return 0;
+    }
+    else if (n == 1) {
+        System.out.println(1);
+        return 1;
+    } else {
+        int prev = powersOf2(n / 2);
+        int curr = prev * 2;
+        System.out.println(curr);
+        return curr;
+    }
+}
+
+Q: What would be the runtime?
+A: We keep divide the number by 2 until we get down to base case (1). Such that the runtime is O(log N).
