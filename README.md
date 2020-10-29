@@ -1,1 +1,1 @@
-This is for my personal study purpose on "Cracking the Coding Interview" book. 
+This is for self study on "Cracking the Coding Interview" book. 
