@@ -50,6 +50,17 @@ def uniqueChar(string):
 #             return False
 #         charSet[val] = True
 #     return True
+
+# 5th methods
+# Using a bit vector
+# def uniqueChar(string):
+#     check = 0
+#     for i in range(len(string)):
+#         val = ord(string[i])
+#         if ((check & (1 << val)) > 0):
+#             return False
+#         check |= (1 << val)
+#     return True
 class Test(unittest.TestCase):
     
     string1 = [('abced10'), ('qweasdzxc'), ('')]
