@@ -5,7 +5,7 @@ import unittest
 from itertools import permutations
 
 class Solution():
-    
+    # Work on runtime
     def checkPalinPermut(self, str1):
         perm = permutations(str1.replace(' ', '').lower())
         result = [i for i in set(perm)]
