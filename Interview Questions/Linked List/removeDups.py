@@ -7,6 +7,7 @@ class Solution:
         self.head = None
         
     # insertNode from the front (head node)
+
     def insertNode(self,data):
         newNode = ListNode(data)
         newNode.next = self.head
@@ -35,6 +36,22 @@ class Solution:
                 temp = temp.next
         # return the linked list
         return ll
+
+        
+        
+        # Solution #2
+
+        # if ll.head is None:
+        #     return
+        # temp = ll.head
+        # seen = set([temp.val])
+        # while(temp.next):
+        #     if(temp.next.val in seen):
+        #         temp.next = temp.next.next
+        #     else:
+        #         seen.add(temp.next.val)
+        #         temp = temp.next
+        # return ll
         
     def printLinkedList(self):
         curr = self.head
