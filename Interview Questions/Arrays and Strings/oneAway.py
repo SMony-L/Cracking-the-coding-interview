@@ -2,6 +2,7 @@ import unittest
 from collections import Counter
 class Solution():
     def checkOneAway(self,str1, str2):
+<<<<<<< Updated upstream
         # if absolute value of len(s1) - len(s2) > 1 return False
         if (abs(len(str1) - len(str2)) > 1): return False
         
@@ -22,6 +23,27 @@ class Solution():
                 i+=1
             j+=1
         return True
+=======
+        # if one is empty or both is empty return False
+        # if len equal then it is replaced
+        if len(str1) == len(str2):
+            return oneReplace(str1,str2)
+        # if len is 1 greater then something has been inserted
+        elif len(str1) + 1 == len(str2):
+            return oneInsert(str1,str2)
+        # if len is 1 smaller then something has been removed
+        elif len(str1) - 1 == len(str2):
+            return oneRemove(str1, str2)
+    def oneReplace(self, str1, str2):
+        pass
+        # Todo
+    def oneInsert(self,str1, str2):
+        pass
+        # Todo
+    def oneRemove(self,str1, str2):
+        # Todo
+        pass
+>>>>>>> Stashed changes
 
 class Test(unittest.TestCase):
     data = [
