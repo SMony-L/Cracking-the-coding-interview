@@ -41,12 +41,17 @@ class Queue:
             curr = curr.next
 
     # Look at front of the Queue
-    def peek(self):
+    def peekFront(self):
         if self.isEmpty():
             return None
         else:
             return self.first.val
 
+    def peekLast(self):
+        if self.isEmpty():
+            return None
+        else:
+            return self.last.val
 
 myQ = Queue()
 
@@ -60,13 +65,13 @@ myQ.add(4)
 myQ.add(5)
 myQ.printQueue()
 
-print('\nFront Value is {}'.format(myQ.peek()))
+print('\nFront Value is {}'.format(myQ.peekFront()))
 
 # 1 -> 2 -> 3 -> 4 -> 5
 # Front = 1
 myQ.remove()
 myQ.printQueue()
-print('\nFront Value is {}'.format(myQ.peek()))
+print('\nFront Value is {}'.format(myQ.peekFront()))
 
 # 4 -> 5
 # Front = 4
@@ -74,4 +79,5 @@ myQ.remove()
 myQ.remove()
 myQ.remove()
 myQ.printQueue()
-print('\nFront Value is {}'.format(myQ.peek()))
+print('\nFront Value is {}'.format(myQ.peekFront()))
+print('\nLast Value is {}'.format(myQ.peekLast()))
